@@ -20,7 +20,7 @@ app.use(bodyParser.json({ limit: "30mb" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "https://talk-a-tive-96k8.onrender.com"],
   })
 );
 
@@ -58,7 +58,7 @@ const server = app.listen(PORT, () => {
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: ["http://localhost[:3000", "https://talk-a-tive-96k8.onrender.com"],
   },
 });
 
